@@ -801,7 +801,8 @@ class SchedulesData extends CodonData {
 				WHERE `dateadded` + INTERVAL {$cache_time} HOUR < NOW()";
 
         $results = DB::get_results($sql);
-        if (count($results) > 0) {
+        if(is_array ($results) || $results instanceof Countable)
+	if (count($results) > 0) {
             foreach ($results as $row) {
                 $sql = 'UPDATE ' . TABLE_PREFIX . "schedules
 						SET `bidid`=0 WHERE `id`={$row->routeid}";
