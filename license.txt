@@ -1,9 +1,5 @@
 Copyright (c) 2014 Nabeel Shahzad
 All rights reserved.
-
-    The "powered by phpVMS" must be kept visible, as-per the license
-        If you want to remove the attribution, a license can be purchased
-        https://docs.phpvms.net/#license
         
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -18,6 +14,11 @@ and/or other materials provided with the distribution.
 3. Neither the name of the copyright holder nor the names of its contributors
 may be used to endorse or promote products derived from this software without
 specific prior written permission.
+
+*****       A "powered by phpVMS" is required in page footers,        *****
+*****       unless the license has been purchased to omit it.         *****
+*****                https://docs.phpvms.net/#license.                *****
+*****  A license can be purchased at https://vmshost.io/store/phpvms  *****
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
