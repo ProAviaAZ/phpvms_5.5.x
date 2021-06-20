@@ -2,10 +2,11 @@ phpVMS 5.5.2.72
 ===============
 
 **Updated version of phpVMS 5.5.2 (simpilot) with PHP 7.2 compatibility**
-
-**The "powered by phpVMS" must be kept visible, as-per the license
-        If you want to remove the attribution, a license can be purchased
-        https://docs.phpvms.net/#license**
+        
+****       A "powered by phpVMS" is required in page footers,        ****
+****       unless the license has been purchased to omit it.         ****
+****                 https://docs.phpvms.net/#license                ****
+****  A license can be purchased at https://vmshost.io/store/phpvms  ****
 
 Current release stable on PHP 7.2.19 environment (Apache 2.4.39, PHP 7.2.19, MySQL 5.6.44).
 
