@@ -333,7 +333,7 @@ CREATE TABLE `phpvms_pilots` (
   `retired` smallint(6) NOT NULL DEFAULT '0',
   `joindate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `lastpirep` datetime NOT NULL DEFAULT '1970-01-01 01:01:01',
-  `lastip` varchar(25) DEFAULT '',
+  `lastip` varchar(45) DEFAULT '',
   `comment` text,
   PRIMARY KEY (`pilotid`),
   KEY `code` (`code`),
@@ -468,7 +468,7 @@ CREATE TABLE `phpvms_schedules` (
 CREATE TABLE `phpvms_sessions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pilotid` int(11) NOT NULL,
-  `ipaddress` varchar(25) NOT NULL,
+  `ipaddress` varchar(45) NOT NULL,
   `logintime` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
