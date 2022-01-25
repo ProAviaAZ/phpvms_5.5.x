@@ -42,9 +42,9 @@
  */
 
 define('ezDB_VERSION','3.00');
-define('OBJECT','OBJECT', true);
-define('ARRAY_A','ARRAY_A', true);
-define('ARRAY_N','ARRAY_N', true);
+define('OBJECT', 'OBJECT', false);
+define('ARRAY_A', 'ARRAY_A', false);
+define('ARRAY_N', 'ARRAY_N', false);
 
 /**
  *  Simple exception container class

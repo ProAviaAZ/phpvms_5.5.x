@@ -87,7 +87,11 @@ if(Debug::$debug_enabled == true) {
 /* Init caching engine */
 CodonCache::init($cache_settings);
 
-if(DBASE_NAME != '' && DBASE_SERVER != '' && DBASE_NAME != 'DBASE_NAME') {
+$DBASE_NAME = defined('DBASE_NAME') ? DBASE_NAME : null;
+$DBASE_SERVER = defined('DBASE_SERVER') ? DBASE_SERVER : null;
+$TABLE_PREFIX = defined('TABLE_PREFIX') ? TABLE_PREFIX : null;
+
+if($DBASE_NAME != '' && $DBASE_SERVER != '' && $DBASE_NAME != 'DBASE_NAME') {
     
 	require CLASS_PATH.DS.'ezdb/ezdb.class.php';
 	
@@ -100,7 +104,7 @@ if(DBASE_NAME != '' && DBASE_SERVER != '' && DBASE_NAME != 'DBASE_NAME') {
 	DB::set_error_handler(array('Debug', 'db_error'));
 	
 	DB::set_caching(false);
-	DB::$table_prefix = TABLE_PREFIX;
+	DB::$table_prefix = $TABLE_PREFIX;
 	DB::set_cache_dir(CACHE_PATH);
 	DB::$DB->debug_all = false;
 	

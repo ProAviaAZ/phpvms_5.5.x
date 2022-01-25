@@ -279,7 +279,7 @@
 		<field Field="retired" Type="smallint(6)" Null="NO" Key="" Default="0" Extra="" Comment="" />
 		<field Field="joindate" Type="TIMESTAMP" Null="NO" Key="" Default="CURRENT_TIMESTAMP" Extra="" Comment="" />
 		<field Field="lastpirep" Type="datetime" Null="NO" Key="" Default="1970-01-01 01:01:01" Extra="" Comment="" />
-		<field Field="lastip" Type="varchar(25)" Null="YES" Key="" Default="" Extra="" Comment="" />
+		<field Field="lastip" Type="varchar(45)" Null="YES" Key="" Default="" Extra="" Comment="" />
 		<field Field="comment" Type="text" Null="YES" Key="" Extra="" Comment="" />
 		<key Table="phpvms_pilots" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="pilotid" Collation="A" Cardinality="4" Null="" Index_type="BTREE" Comment="" />
 		<key Table="phpvms_pilots" Non_unique="1" Key_name="code" Seq_in_index="1" Column_name="code" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" />
@@ -399,7 +399,7 @@
 	<table_structure name="phpvms_sessions">
 		<field Field="id" Type="int(11)" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
 		<field Field="pilotid" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
-		<field Field="ipaddress" Type="varchar(25)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="ipaddress" Type="varchar(45)" Null="NO" Key="" Extra="" Comment="" />
 		<field Field="logintime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
 		<key Table="phpvms_sessions" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="15" Null="" Index_type="BTREE" Comment="" />
 		<options Name="phpvms_sessions" Engine="MyISAM" Version="10" Row_format="Dynamic" Rows="15" Avg_row_length="44" Data_length="35580" Max_data_length="281474976710655" Index_length="13312" Data_free="34912" Auto_increment="13093" Create_time="2011-03-23 18:46:35" Update_time="2012-01-17 19:19:35" Check_time="2011-11-14 20:01:28" Collation="latin1_swedish_ci" Create_options="" Comment="" />

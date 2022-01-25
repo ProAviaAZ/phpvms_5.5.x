@@ -180,8 +180,9 @@ class SettingsData extends CodonData {
         $name = strtoupper(DB::escape($name));
         $value = DB::escape($value);
         $descrip = DB::escape($descrip);
+        $TABLE_PREFIX = defined('TABLE_PREFIX') ? TABLE_PREFIX : null;
 
-        $sql = 'UPDATE ' . TABLE_PREFIX . 'settings
+        $sql = 'UPDATE ' . $TABLE_PREFIX . 'settings
 					SET value=\'' . $value . '\' WHERE name=\'' . $name . '\'';
 
         $res = DB::query($sql);
