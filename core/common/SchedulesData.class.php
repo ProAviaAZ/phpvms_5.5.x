@@ -429,29 +429,29 @@ class SchedulesData extends CodonData {
         }
 
         $data['flighttime'] = str_replace(':', '.', $data['flighttime']);
-        
-        
+
         # Do the insert based on the columns here
         $cols = array();
         $col_values = array();
-        
+
         foreach ($data as $key => $value) {
-            
-            if($key == 'daysofweek' || $key == 'week1' || $key == 'week2' || $key == 'week3' || $key == 'week4') {        
+
+            if ($key == 'daysofweek' || $key == 'week1' || $key == 'week2' || $key == 'week3' || $key == 'week4') {
                 $value = str_replace('7', '0', $value);
             } else {
                 $value = DB::escape($value);
             }
-            
-            
-            $cols[] = "`{$key}`";
-            $col_values[] = "'{$value}'";
+
+            # Add only filled fields to the query array 
+            if ($value != '') {
+                $cols[] = "`{$key}`";
+                $col_values[] = "'{$value}'";
+            }
         }
 
         $cols = implode(', ', $cols);
         $col_values = implode(', ', $col_values);
         $sql = 'INSERT INTO ' . TABLE_PREFIX . "schedules ({$cols}) VALUES ({$col_values});";
-
         $res = DB::query($sql);
 
         if (!empty($data['route'])) {
